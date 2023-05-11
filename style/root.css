@@ -13,6 +13,15 @@
     --primary-darkblack: rgb(27, 26, 26);
     --primary-grey: rgb(86, 86, 86);
 
+    --success: rgb(40, 167, 69);
+    --primary: rgb(0, 123, 255);
+    --danger: rgb(220, 53, 69);
+    --warning: rgb(255, 193, 7);
+    --secondary: rgb(108, 117, 125);
+    --info: rgb(23, 162, 184);
+    --light: rgb(248, 249, 250);
+    --dark: rgb(52, 58, 64);
+
     --font-xxsmall: xx-small;
     --font-xsmall: x-small;
     --font-small: small;
@@ -21,10 +30,20 @@
     --font-xlarge: x-large;
     --font-xxlarge: xx-large;
 
-    --p16: 1rem;
-    --m16: 1rem;
+    --font-400: 400; /* normal */
+    --font-500: 500;
+    --font-600: 600;
+    --font-700: 700; /* bold */
 
-    --border-radius: var(--border-radius);
+    --p12: 0.75rem;
+    --p16: 1rem;
+    --p20: 1.25rem;
+
+    --m12: 0.75rem;
+    --m16: 1rem;
+    --m20: 1.25rem;
+
+    --border-radius: 5px;
 }
 input[type=text],
 input[type=password],
@@ -32,7 +51,7 @@ input[type=password],
 input[type=tel],
 textarea{
     width: 100%;
-    padding: 12px;
+    padding: var(--p12);
     border: 1px solid var(--primary-grey);
     border-radius: var(--border-radius);
     margin: 0.375rem 0 1rem 0;
@@ -44,7 +63,7 @@ select{
     outline: none;
     position: relative;
     width: 100%;
-    padding: 12px;
+    padding: var(--p12);
     margin: 0.375rem 0 1rem 0;
     border: 1px solid var(--primary-grey);
 }
@@ -65,7 +84,7 @@ select{
     right: 0;
     bottom: 0;
     text-align: center;
-    padding: 12px;
+    padding: var(--p12);
 }
 .label_checkbox{
     position: relative;
@@ -146,4 +165,65 @@ select{
     background: var(--white);
     border: 2px solid var(--black);
     border-radius: 50%;
+}
+.link{
+    text-decoration: none;
+    border: solid 1px var(--secondary);
+    color: var(--dark);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    padding: var(--p12);
+}
+.btn{
+    background: none;
+    border: solid 1px var(--secondary);
+    color: var(--dark);
+    padding: var(--p12);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+.btn-primary,
+.link-primary{
+    background-color: var(--primary);
+}
+.btn-danger,
+.link-danger{
+    background-color: var(--danger);
+}
+.btn-warning,
+.link-warning{
+    background-color: var(--warning);
+}
+.btn-success,
+.link-success{
+    background-color: var(--success);
+}
+.btn-dark,
+.link-dark{
+    background-color: var(--dark);
+}
+.btn-secondary,
+.link-secondary{
+    background-color: var(--secondary);
+}
+.btn-light,
+.link-light{
+    background-color: var(--light);
+}
+.btn-info,
+.link-info{
+    background-color: var(--info);
+}
+.btn:hover,
+.link:hover{
+    color: var(--black);
+}
+.btn-group{
+    display: flex;
+}
+.btn-group button:first-child{
+    border-radius: 5px 0 0 5px;
+}
+.btn-group button:last-child{
+    border-radius: 0 5px 5px 0;
 }

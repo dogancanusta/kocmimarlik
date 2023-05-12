@@ -295,7 +295,7 @@ table tbody tr:nth-child(even) {
     position: relative;
     width: 100%;
 }
-.dropdown input{
+.dropdown input[type=checkbox]{
     display: none;
 }
 .dropdown label{

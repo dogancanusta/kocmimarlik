@@ -45,6 +45,11 @@
 
     --border-radius: 5px;
 }
+a{
+    text-decoration: none;
+    color: var(--black);
+    cursor: pointer;
+}
 input[type=text],
 input[type=password],
 input[type=password],
@@ -254,6 +259,41 @@ select{
 }
 .btn-group button:last-child{
     border-radius: 0 5px 5px 0;
+}
+.dropdown{
+    position: relative;
+    width: 100%;
+}
+.dropdown input{
+    display: none;
+}
+.dropdown label{
+    /* background: #2d5faf; */
+    display: block;
+    color: #000;
+    padding: var(--p12);
+    cursor: pointer;
+}
+.dropdown label i{
+    float: right;
+    transition: all 0.5s;
+}
+.dropdown input[type=checkbox]:checked + label i {
+    transform: rotate(180deg);
+}
+.dropdown-content{
+    /* background: #ccdef9; */
+    overflow: hidden;
+    transition: max-height 0.5s; 
+    max-height: 0;
+}
+.dropdown-content ul{
+  list-style: none;
+  padding: var(--p16) var(--p20);
+  line-height: 40px;
+}
+.dropdown input:checked ~ .dropdown-content {
+    max-height: 100vh;
 }
 .card{
     width: 300px;

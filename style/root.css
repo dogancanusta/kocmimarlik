@@ -54,6 +54,7 @@ input[type=text],
 input[type=password],
 input[type=password],
 input[type=tel],
+input[type=date],
 textarea{
     width: 100%;
     padding: var(--p12);
@@ -61,6 +62,20 @@ textarea{
     border-radius: var(--border-radius);
     margin: 0.375rem 0 1rem 0;
     resize: none;
+}
+input[type=file]{
+    width: 100%;
+    border: 1px solid var(--light);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: var(--border-radius);
+}
+input[type=file]::file-selector-button{
+    color: var(--black);
+    border: none;
+    border-right: 1px solid var(--light);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding: var(--p12) var(--p20);
+    transition: 0.5s;
 }
 select{
     appearance: none;
@@ -91,6 +106,22 @@ select{
     text-align: center;
     padding: var(--p12);
 }
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table td,
+table th {
+    padding: var(--p16);
+}
+table th{
+    background-color: var(--secondary);
+    color: var(--black);
+    text-align: left;
+}
+table tbody tr:nth-child(even) {
+    background-color: var(--secondary);
+}
 .label_checkbox{
     position: relative;
     color: var(--black);
@@ -114,7 +145,7 @@ select{
     z-index: 1;
     width: 1rem;
     height: 0.4rem;
-    border: 3px solid red;
+    border: 3px solid var(--black);
     border-top-style: none;
     border-right-style: none;
 }
@@ -156,7 +187,7 @@ select{
     z-index: 1;
     width: 0.70rem;
     height: 0.70rem;
-    background: red;
+    background: var(--black);
     border-radius: 50%;
 }
 .radio:checked::before{
@@ -317,6 +348,7 @@ select{
     border-bottom: solid 1px var(--secondary);
 }
 .card-img img{
+    display: block;
     width:100%;
     height:auto;
     object-fit:cover;
@@ -377,4 +409,32 @@ select{
     50%{
     opacity: 1;
     }
-} 
+}
+@media (max-width: 768px) {
+    table thead {
+      display: none;
+    }
+    table,
+    table tbody,
+    table tr,
+    table td {
+      display: block;
+      width: 100%;
+    }
+    table tr {
+      margin-bottom: var(--m16);
+    }
+    table td {
+      padding-left: 50%;
+      text-align: left;
+      position: relative;
+    }
+    table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding-left: var(--p16);
+      font-weight: var(--font-700);
+    }
+}

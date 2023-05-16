@@ -329,7 +329,7 @@ table tbody tr:nth-child(even) {
     max-height: 100vh;
 }
 .card{
-    width: 300px;
+    flex: 1 1 300px;
     height: 100%;
     position: relative;
     border-radius: var(--border-radius);
@@ -429,7 +429,7 @@ table tbody tr:nth-child(even) {
     display: flex;
     flex-direction: row;
     position: relative;
-    padding: var(--p16);
+    padding: var(--p12);
     background-color: red;
 }
 .close{
@@ -439,7 +439,7 @@ table tbody tr:nth-child(even) {
     position: absolute;
     top: 0px;
     right: 0;
-    width: 70px;
+    width: 55px;
     font-size: var(--font-large);
     height: 100%;
     cursor: pointer;

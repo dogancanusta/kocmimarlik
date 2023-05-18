@@ -56,6 +56,8 @@ input[type=password],
 input[type=password],
 input[type=tel],
 input[type=date],
+input[type=datetime-local],
+input[type=datetime],
 textarea{
     width: 100%;
     padding: var(--p12);
@@ -202,6 +204,26 @@ table tbody tr:nth-child(even) {
     background: var(--white);
     border: 2px solid var(--black);
     border-radius: 50%;
+}
+.badge{
+    padding: 8px;
+    border-radius: 2rem;
+    font-size: var(--font-small);
+}
+.badge-waiting{
+    background-color: rgb(108, 117, 125, 0.5);
+    opacity: 0.7;
+}
+.badge-sended{
+    background-color: rgb(255, 193, 7, 0.6);
+    opacity: 0.8;
+}
+.badge-approved{
+    background-color: rgb(40, 167, 69, 0.7);
+    opacity: 0.9;
+}
+.badge-rejected{
+    background-color: rgb(220, 53, 69, 0.8);
 }
 .link{
     text-decoration: none;

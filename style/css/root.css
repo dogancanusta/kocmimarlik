@@ -5,13 +5,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    background-color: var(--primary-blue);
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 1px, transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 1px, transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 1px, transparent 1px, transparent 100%);
+    -webkit-background-size: 3px 3px;
+    -moz-background-size: 3px 3px;
+    background-size: 3px 3px;
+}
+  
 :root{
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
 
-    --primary-green: rgb(119, 130, 20);
-    --primary-darkblack: rgb(27, 26, 26);
-    --primary-grey: rgb(86, 86, 86);
+    /* --primary-darkblue: rgb(8, 34, 61);
+    --primary-blue: rgb(3, 39, 79);
+    --primary-lightblue: rgb(4, 47, 96); */
+
+
+    --primary-darkblue: rgb(12, 16, 51);
+    --primary-blue: rgb(29, 35, 77);
+    --primary-purple: rgb(46, 51, 90);
+    --primary-lightpurple: rgb(69, 75, 121); 
 
     --success: rgb(40, 167, 69);
     --primary: rgb(0, 123, 255);

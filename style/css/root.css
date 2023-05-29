@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 html {
-    background-color: var(--primary-blue);
+    background-color: var(--primary-lightpurple);
     background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 1px, transparent 1px, transparent 100%);
     background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 1px, transparent 1px, transparent 100%);
     background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,0.2), rgba(0,0,0,0.2) 1px, transparent 1px, transparent 100%);
@@ -244,11 +244,11 @@ table tbody tr:nth-child(even) {
 }
 .link{
     text-decoration: none;
-    color: var(--dark);
+    color: var(--white);
     cursor: pointer;
     border-radius: var(--border-radius);
     padding: var(--p12);
-    box-shadow: rgba(0, 0, 0, 0.25) 0 0 3px;
+    border: solid 1px var(--white);
 }
 .btn{
     width: 100%;
@@ -401,7 +401,6 @@ table tbody tr:nth-child(even) {
     flex-direction: column;
     gap: 20px;
     padding: var(--p20);
-    border-bottom: solid 1px var(--secondary);
 }
 .card-footer{
     display: flex;

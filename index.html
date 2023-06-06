@@ -1,191 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="/style/css/index.css">
     <link rel="stylesheet" href="/style/css/root.css">
 
-    <title>Koç Mimarlık</title>
+    <title>Koç - Anasayfa</title>
 </head>
+
 <body>
-  <div class="container">
-    <div class="navbar-container" id="navbar">
-      <input type="checkbox" id="hamburger">
-      <div>
-          <div class="nav-title">
-              <h3>Logo</h3>
-          </div>
-      </div>
-      
-      <div class="hamburgerMenu">
-          <label for="hamburger">
-              <div></div>
-              <div></div>
-              <div></div>
-          </label>
-      </div>
+    <div class="container">
+        <div class="navbar-container" id="navbar">
+            <input type="checkbox" id="hamburger">
+            <div>
+                <div class="navbar-title">
+                    <h3>Logo</h3>
+                </div>
+            </div>
+            <div class="hamburgerMenu">
+                <label for="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </label>
+            </div>
+            <div class="navbar-links">
+                <a href="#"><i class="fa fa-home"></i> Anasayfa</a>
+                <a href="#"><i class="fa fa-institution"></i> Projeler</a>
+                <a href="#"><i class="fa fa-question"></i> Hakkımızda</a>
+                <a href="#"><i class="fa fa-phone"></i> İletişim</a>
+            </div>
+        </div>
+        <div class="slider-container">
+            <div class="slide-item slide-animation">
+                <img src="https://picsum.photos/1920/1080?random=1">
+            </div>
+            <div class="slide-item slide-animation">
+                <img src="https://picsum.photos/1920/1080?random=2">
+            </div>
+            <div class="slide-item slide-animation">
+                <img src="https://picsum.photos/1920/1080?random=3">
+            </div>
+            <div class="slide-item slide-animation">
+                <img src="https://picsum.photos/1920/1080?random=4">
+            </div>
+            <div class="slide-item slide-animation">
+                <img src="https://picsum.photos/1920/1080?random=5">
+            </div>
 
-      <div class="links">
-          <a href="#"><i class="fa fa-home"></i> Anasayfa</a>
-          <a href="#"><i class="fa fa-institution"></i> Projeler</a>
-          <a href="#"><i class="fa fa-question"></i> Hakkımızda</a>
-          <a href="#"><i class="fa fa-phone"></i> İletişim</a>
-      </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="dot-container" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+        <div class="main">
+            <div class="about-container">
+                <div class="main-header">
+                    <h1>Hakkımızda</h1>
+                </div>
+                <div class="about-body">
+                    <div class="about-content">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3><i class="fa fa-ellipsis-v"></i> Hakkımızda</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Voluptate pariatur eius inventore modi voluptatem minus qui, aut expedita facilis
+                                    quas, praesentium accusamus error tempore id corporis velit cupiditate est adipisci.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, sapiente aliquid.
+                                    Quidem, qui? Ad quidem nihil dolorum cum, fugit debitis odit temporibus modi veniam
+                                    iusto nobis excepturi reiciendis? Ex, tempore? Lorem ipsum, dolor sit amet
+                                    consectetur adipisicing elit. Officia odit quisquam minima incidunt odio aliquid
+                                    omnis blanditiis explicabo, totam doloribus, reiciendis iusto error sit consectetur
+                                    illum, dolor animi nobis quis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-img">
+                        <img src="https://picsum.photos/1920/1080?random=6" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="before-after">
+                <img class="before-after-img back-img" src="https://picsum.photos/1920/1080?random=7" alt="before">
+                <img class="before-after-img front-img" src="https://picsum.photos/1920/1080?random=8" alt="after">
+
+                <input type="range" min="0" max="100" value="50" class="before-after-slider" id="before-after-slider">
+            </div>
+            <div class="project-container">
+                <div class="main-header">
+                    <h1>Projeler</h1>
+                </div>
+                <div class="project-body">
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-content-overlay"></div>
+                            <div class="card-body card-fadeIn-bottom">
+                                <div class="card-title">
+                                    <h1>Proje 1</h1>
+                                </div>
+                                <div class="card-content">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro numquam ipsam in obcaecati
+                                        fugit iste.
+                                        Eveniet voluptate voluptas sed? Dignissimos repudiandae voluptas culpa quas aliquid iste
+                                        illo sint commodi
+                                        nam!</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-content-overlay"></div>
+                            <div class="card-body card-fadeIn-bottom">
+                                <div class="card-title">
+                                    <h1>Proje 2</h1>
+                                </div>
+                                <div class="card-content">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro numquam ipsam in obcaecati
+                                        fugit iste.
+                                        Eveniet voluptate voluptas sed? Dignissimos repudiandae voluptas culpa quas aliquid iste
+                                        illo sint commodi
+                                        nam!</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-content-overlay"></div>
+                            <div class="card-body card-fadeIn-bottom">
+                                <div class="card-title">
+                                    <h1>Proje 3</h1>
+                                </div>
+                                <div class="card-content">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro numquam ipsam in obcaecati
+                                        fugit iste.
+                                        Eveniet voluptate voluptas sed? Dignissimos repudiandae voluptas culpa quas aliquid iste
+                                        illo sint commodi
+                                        nam!</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#">
+                            <div class="card-content-overlay"></div>
+                            <div class="card-body card-fadeIn-bottom">
+                                <div class="card-title">
+                                    <h1>Proje 4</h1>
+                                </div>
+                                <div class="card-content">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro numquam ipsam in obcaecati
+                                        fugit iste.
+                                        Eveniet voluptate voluptas sed? Dignissimos repudiandae voluptas culpa quas aliquid iste
+                                        illo sint commodi
+                                        nam!</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h3>Logo</h3>
+            <p class="footer-description">
+                Geeks Help is an independent website for Web Developers, Programmers, Computer Science students. We provide
+                syllabus and practical problem solutions online.
+            </p>
+            <div class="footer-social">
+                <ul>
+                    <li><i class="fa fa-instagram"></i></li>
+                    <li><i class="fa fa-linkedin"></i></li>
+                    <li><i class="fa fa-youtube"></i></li>
+                    <li><i class="fa fa-facebook"></i></li>
+                    <li><i class="fa fa-telegram"></i></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-left">
+                    Copyright &copy; 2021-23 <a href="#"> Geeks Help </a>
+                </span>
+                <div class="footer-right">
+                    <a href="#"> Home </a>
+                    <a href="#"> About </a>
+                    <a href="#"> Contact </a>
+                    <a href="#"> Blog </a>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="slider-container">
-      <div class="slide-item slide-animation">
-        <img src="https://picsum.photos/1920/1080?random=1">
-      </div>
-      <div class="slide-item slide-animation">
-        <img src="https://picsum.photos/1920/1080?random=2">
-      </div>
-      <div class="slide-item slide-animation">
-        <img src="https://picsum.photos/1920/1080?random=3">
-      </div>
-      <div class="slide-item slide-animation">
-        <img src="https://picsum.photos/1920/1080?random=4">
-      </div>
-      <div class="slide-item slide-animation">
-        <img src="https://picsum.photos/1920/1080?random=5">
-    </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-      <div class="dot-container" style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-      </div>
-    </div>
-    <div class="main">
-      <div class="about-container">
-        <div class="main-header">
-          <h1>Hakkımızda</h1>
-        </div>
-        <div class="about-body">
-          <div class="about-content">
-            content
-          </div>
-          <div class="about-img">
-            <img src="https://picsum.photos/1920/1080?random=6" alt="">
-          </div>
-        </div>
-      </div>
-
-      <section class="before-after">
-        <img class="img back-img" src="https://picsum.photos/1920/1080?random=1">
-        <img class="img front-img" src="https://picsum.photos/1920/1080?random=2">
-      
-        <input type="range" min="0" max="100" value="50" class="slider" name="slider" id="slider">
-      </section>
-
-      <div class="project-container">
-        <div class="main-header">
-          <h1>Projeler</h1>
-        </div>
-<div class="project-body">
-  <div class="card">
-    <a href="#">
-      <div class="card-content-overlay"></div>
-      <div class="card-body card-fadeIn-bottom">
-        <div class="card-title">
-          <h1>Proje 1</h1>
-        </div>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro numquam ipsam in obcaecati fugit iste. Eveniet voluptate voluptas sed? Dignissimos repudiandae voluptas culpa quas aliquid iste illo sint commodi nam!</p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="card">
-    <a href="#">
-      <div class="card-content-overlay"></div>
-      <div class="card-body card-fadeIn-bottom">
-        <div class="card-title">
-          <h1>Proje 2</h1>
-        </div>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro numquam ipsam in obcaecati fugit iste. Eveniet voluptate voluptas sed? Dignissimos repudiandae voluptas culpa quas aliquid iste illo sint commodi nam!</p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="card">
-    <a href="#">
-      <div class="card-content-overlay"></div>
-      <div class="card-body card-fadeIn-bottom">
-        <div class="card-title">
-          <h1>Proje 3</h1>
-        </div>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro numquam ipsam in obcaecati fugit iste. Eveniet voluptate voluptas sed? Dignissimos repudiandae voluptas culpa quas aliquid iste illo sint commodi nam!</p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="card">
-    <a href="#">
-      <div class="card-content-overlay"></div>
-      <div class="card-body card-fadeIn-bottom">
-        <div class="card-title">
-          <h1>Proje 4</h1>
-        </div>
-        <div class="card-content">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro numquam ipsam in obcaecati fugit iste. Eveniet voluptate voluptas sed? Dignissimos repudiandae voluptas culpa quas aliquid iste illo sint commodi nam!</p>
-        </div>
-      </div>
-    </a>
-  </div>
-  <div class="bg"></div>
-</div>
-        
-
-
-
-      </div>
-      
-    </div>
-    <footer class="footer">
-      <div class="box">
-          <h2> Links </h2>
-          <ul class="lin">
-              <li><a href="#"> Home </a></li>
-              <li><a href="#"> Blogs </a></li>
-              <li><a href="#"> Services </a></li>
-              <li><a href="#"> About Us </a></li>
-              <li><a href="#"> Contact Us </a></li>
-          </ul>
-      </div>
-      <div class="box">
-          <h2> News Letter </h2>
-          <form action="" class="registration">
-              <input type="email" name="email" id="email" placeholder="Enter your email Address">
-              <button type="submit"> Subscibe Now </button>
-          </form>
-      </div>
-      <div class="box">
-          <h2> Contact </h2>
-          <p class="address"> 123, xyz Road, ABC 20 <br>
-              Hisar, Haryana, India
-          </p>
-          <ul class="social">
-              <li><i class="fa-brands fa fa-facebook"></i></li>
-              <li><i class="fa-brands fa fa-twitter"></i></li>
-              <li><i class="fa-brands fa fa-instagram"></i></li>
-              <li><i class="fa-brands fa fa-youtube"></i></li>
-          </ul>
-      </div>
-  </footer>
-  </div>
-
-<script src="/style/js/custom.js"></script>
+    <script src="/style/js/custom.js"></script>
 </body>
+
 </html>

@@ -57,7 +57,7 @@
     position: relative;
     overflow: hidden;
 }
-.slide-item {
+.slide-item{
     display: none;
 }
 .slide-item img{
@@ -81,7 +81,8 @@
 	right: 0;
 	border-radius: 5px 0 0 5px;
 }
-.prev:hover, .next:hover{
+.prev:hover, 
+.next:hover{
 	background-color: rgba(29, 35, 77, 0.8);
 }
 .dot-container{
@@ -99,7 +100,8 @@
 	cursor: pointer;
 	transition: background-color 0.5s ease;
 }
-.active, .dot:hover{
+.active, 
+.dot:hover{
 	background-color: var(--primary-lightpurple);
 }
 .slide-animation:nth-child(1){
@@ -189,12 +191,12 @@
     background-repeat: no-repeat;
     border-radius: 0 5px 5px 0;
 }
-.before-after{
+.beforeafter-container{
     width: 100%;
     min-height: 60vh;
     position: relative;
 }
-.before-after .before-after-img{
+.beforeafter-container .beforeafter-img{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -202,11 +204,11 @@
     right: 0;
     object-fit: cover;
 }
-.before-after .before-after-img .front-img{
+.beforeafter-container .beforeafter-img .front-img{
     z-index: 1;
     clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
 }
-.before-after-slider{
+.beforeafter-slider{
     width: 100%;
     height: 100%;
     appearance: none;
@@ -214,7 +216,7 @@
     background: transparent;
     z-index: 2;
 }
-.before-after-slider::-webkit-slider-thumb{
+.beforeafter-slider::-webkit-slider-thumb{
     width: 55px;
     height: 55px;
     appearance: none;
@@ -226,6 +228,34 @@
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
+}
+.shortcontent-container{
+    display: flex;
+    justify-content: center;
+}
+.shortcontent-body{
+    width: 1280px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+.shortcontent-body .card{
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-darkblue);
+    border: none;
+    text-align: center;
+    color: var(--white);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.shortcontent-body .card .shortcontent-headericon{
+    font-size: 68px;
+}
+.shortcontent-body .card .shortcontent-contenticon{
+    transform: rotate(330deg);
 }
 .project-container .card{
     width: 100%;
@@ -273,7 +303,7 @@
     color: var(--white);
 }
 .project-container .card:hover .card-body{
-    top: 50%;
+    top: 70%;
     left: 50%;
     opacity: 1;
 }
@@ -322,7 +352,7 @@
     background-color: var(--primary-darkblue);
     color: var(--white);
     text-align: center;
-    padding: 20px 0;
+    padding: var(--p20) 0;
 }
 .footer-description{
     margin: var(--m12);
@@ -354,6 +384,13 @@
     color: var(--white);
     padding: 5px 10px;
 }
+@-webkit-keyframes slideAnimation1{
+    0% { opacity: 0; }
+    30% { opacity: 1; }
+    55% { clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 0% 100%, 0% 50%, 0% 0%); }
+    75% { clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); }
+    100% { clip-path: polygon(175% 0%, 200% 50%, 175% 100%, 100% 100%, 125% 50%, 100% 0%); }
+}
 @keyframes slideAnimation1{
     0% { opacity: 0; }
     30% { opacity: 1; }
@@ -361,16 +398,24 @@
     75% { clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%); }
     100% { clip-path: polygon(175% 0%, 200% 50%, 175% 100%, 100% 100%, 125% 50%, 100% 0%); }
 }
+@-webkit-keyframes slideAnimation2{
+    0% { clip-path: inset(25% 100% 25% -50%); }
+    50% { clip-path: inset(25% 0% 25% 50%); }
+    100% { clip-path: inset(0); }
+}
 @keyframes slideAnimation2{
     0% { clip-path: inset(25% 100% 25% -50%); }
     50% { clip-path: inset(25% 0% 25% 50%); }
     100% { clip-path: inset(0); }
 }
+@-webkit-keyframes slideDown{
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
 @keyframes slideDown{
     from { transform: translateY(-100%); }
     to { transform: translateY(0); }
 }
-
 @media (max-width:768px){
     .navbar-container{
         justify-content: space-between;
@@ -426,9 +471,10 @@
     .project-container .card:nth-child(1),
     .project-container .card:nth-child(2),
     .project-container .card:nth-child(3){
+        border-right: none;
         border-bottom: solid 3px var(--primary-darkblue);
     }
-    .footer-bottom {
+    .footer-bottom{
         justify-content: center;
         gap: 12px;
         margin: var(--m12);

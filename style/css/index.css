@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    line-height: 20px;
 }
 .navbar-container{
     width: 100%;
@@ -102,7 +103,7 @@
 }
 .active, 
 .dot:hover{
-	background-color: var(--primary-lightpurple);
+	background-color: var(--primary-blue);
 }
 .slide-animation:nth-child(1){
 	-webkit-animation-name: slideAnimation1;
@@ -146,11 +147,27 @@
     padding: var(--p20);
     border-bottom: solid 1px var(--white);
     margin-bottom: 70px;
+    position: relative;
 }
 .main-header h1{
     letter-spacing: 1vw;
     color: var(--white);
     text-align: center;
+}
+.mainheader-dot{
+    background-color: var(--primary-blue);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+}
+.main-header .mainheader-dot:nth-child(1){
+    bottom: -10px;
+    left: 0;
+}
+.main-header .mainheader-dot:nth-child(3){
+    bottom: -10px;
+    right: 0;
 }
 .about-container,
 .project-container{
@@ -257,6 +274,10 @@
 .shortcontent-body .card .shortcontent-contenticon{
     transform: rotate(330deg);
 }
+.shortcontent-body .card:hover .shortcontent-headericon{
+    transform: rotateY(360deg);
+    transition: all 0.5s;
+}
 .project-container .card{
     width: 100%;
     min-height: 60vh;
@@ -303,12 +324,12 @@
     color: var(--white);
 }
 .project-container .card:hover .card-body{
-    top: 70%;
+    top: 75%;
     left: 50%;
     opacity: 1;
 }
 .project-container .card-fadeIn-bottom{
-    top: calc(100% + 24px);
+    top: calc(100% + 34px);
 }
 .project-body{  
     display: flex;

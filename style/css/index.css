@@ -155,7 +155,7 @@
     text-align: center;
 }
 .mainheader-dot{
-    background-color: var(--primary-blue);
+    background-color: var(--white);
     width: 20px;
     height: 20px;
     position: absolute;
@@ -290,7 +290,7 @@
 .project-container .card:nth-child(2),
 .project-container .card:nth-child(3){
     border-radius: 0;
-    border-right: solid 3px var(--primary-blue);
+    border-right: solid 3px var(--white);
 }
 .project-container .card .card-content-overlay{
     width: 100%;
@@ -493,7 +493,7 @@
     .project-container .card:nth-child(2),
     .project-container .card:nth-child(3){
         border-right: none;
-        border-bottom: solid 3px var(--primary-darkblue);
+        border-bottom: solid 3px var(--white);
     }
     .footer-bottom{
         justify-content: center;

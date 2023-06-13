@@ -288,7 +288,7 @@
     border: none;
     box-shadow: none;
 }
-.card:nth-child(1) img {
+.card:first-child img {
     border-left: none;
 }
 .project-body img{
@@ -326,22 +326,30 @@
 }
 .card:nth-child(1):hover ~ .bg{
     background: url("https://picsum.photos/1920/1080?random=1");
-    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: all 0.3s;
 }
 .card:nth-child(2):hover ~ .bg{
     background: url("https://picsum.photos/1920/1080?random=2");
-    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: all 0.3s;
 }
 .card:nth-child(3):hover ~ .bg{
     background: url("https://picsum.photos/1920/1080?random=3");
-    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: all 0.3s;
 }
 .card:nth-child(4):hover ~ .bg{
     background: url("https://picsum.photos/1920/1080?random=4");
-    object-fit: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transition: all 0.3s;
 }
 .bg{

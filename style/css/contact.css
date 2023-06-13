@@ -78,7 +78,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    padding: 110px 0 85px 0;
+    padding: 110px 0 80px 0;
     background-color: rgb(29, 35, 77, 0.8);
 }
 .contact-header-front-body{
@@ -132,6 +132,15 @@
 }
 .contac-content-left hr{
     margin: 0 var(--m20);
+}
+.contac-content-right .card .card-body button{
+    background-color: var(--primary-blue);
+    color: var(--white);
+    transition: all 0.5s;
+}
+.contac-content-right .card .card-body button:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: all 0.5s;
 }
 .footer{
     background-color: var(--primary-darkblue);

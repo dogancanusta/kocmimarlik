@@ -155,7 +155,7 @@
     text-align: center;
 }
 .mainheader-dot{
-    background-color: var(--white);
+    background-color: var(--primary-blue);
     width: 20px;
     height: 20px;
     position: absolute;
@@ -221,7 +221,7 @@
     right: 0;
     object-fit: cover;
 }
-.beforeafter-container .beforeafter-img .front-img{
+.beforeafter-container .beforeafter-img.front-img{
     z-index: 1;
     clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
 }
@@ -278,66 +278,71 @@
     transform: rotateY(360deg);
     transition: all 0.5s;
 }
-.project-container .card{
-    width: 100%;
-    min-height: 60vh;
+.project-body{
+    display: flex;
+    flex-direction: row;
     position: relative;
-    overflow: hidden;
+    height: 60vh;
+}
+.project-body .card{
     border: none;
     box-shadow: none;
 }
-.project-container .card:nth-child(1),
-.project-container .card:nth-child(2),
-.project-container .card:nth-child(3){
-    border-radius: 0;
-    border-right: solid 3px var(--white);
+.card:nth-child(1) img {
+    border-left: none;
 }
-.project-container .card .card-content-overlay{
+.project-body img{
     width: 100%;
     height: 100%;
-    background: rgb(46, 51, 90, 0.2);
+    display: block;
+    border-left: solid 3px var(--white);
+}
+.card a{
+    color: #fff;
+}
+.project-body:hover a:not(:hover){
+    opacity: 0;
+}
+.card:hover img{
+    opacity: 0;
+}
+.card a .card-body{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(29,35,77,1) 150%);
+    display: block;
+    overflow: hidden;
     position: absolute;
     left: 0;
-    top: 0;
-    bottom: 0;
     right: 0;
-    opacity: 0;
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
-    transition: all 0.4s ease-in-out 0s;
-}
-.project-container .card:hover .card-content-overlay{
-    opacity: 1;
-}
-.project-container .card-body{
-    position: absolute;
-    padding: 0 1em;
+    bottom: 0;
+    top: 80%;
+    transition-property: top;
+    transition-duration: 0.3s;
     width: 100%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    -moz-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-    color: var(--white);
 }
-.project-container .card:hover .card-body{
-    top: 75%;
-    left: 50%;
-    opacity: 1;
+.card a:hover .card-body{
+    top: 60%;
+    transition: all 0.3s;
 }
-.project-container .card-fadeIn-bottom{
-    top: calc(100% + 34px);
+.card:nth-child(1):hover ~ .bg{
+    background: url("https://picsum.photos/1920/1080?random=1");
+    object-fit: contain;
+    transition: all 0.3s;
 }
-.project-body{  
-    display: flex;
-    flex-wrap: wrap;
-    width:100%;
-    max-height: 100%;
-    overflow:hidden;
-    position: relative;
+.card:nth-child(2):hover ~ .bg{
+    background: url("https://picsum.photos/1920/1080?random=2");
+    object-fit: contain;
+    transition: all 0.3s;
+}
+.card:nth-child(3):hover ~ .bg{
+    background: url("https://picsum.photos/1920/1080?random=3");
+    object-fit: contain;
+    transition: all 0.3s;
+}
+.card:nth-child(4):hover ~ .bg{
+    background: url("https://picsum.photos/1920/1080?random=4");
+    object-fit: contain;
+    transition: all 0.3s;
 }
 .bg{
     position: absolute;
@@ -346,28 +351,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: url('https://picsum.photos/1920/1080?random=9');
-    transition: all .5s;
-}
-.project-body .card:nth-child(1):hover ~ .bg{
-    background: url('https://picsum.photos/1920/1080?random=9');
-    object-fit: contain;
-}
-.project-body .card:nth-child(2):hover ~ .bg{
-    background: url('https://picsum.photos/1920/1080?random=10');
-    object-fit: contain;
-}
-.project-body .card:nth-child(3):hover ~ .bg{
-    background: url('https://picsum.photos/1920/1080?random=11');
-    object-fit: contain;
-}
-.project-body .card:nth-child(4):hover ~ .bg{
-    background: url('https://picsum.photos/1920/1080?random=12');
-    object-fit: contain;
-}
-.project-body .card:nth-child(5):hover ~ .bg{
-    background: url('https://picsum.photos/1920/1080?random=13');
-    object-fit: contain;
+    background-color: red;
+    transition: all .3s;
 }
 .footer{
     background-color: var(--primary-darkblue);

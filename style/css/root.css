@@ -387,7 +387,7 @@ table tbody tr:nth-child(even) {
     left: 0;
 }
 .card-title{
-    padding: var(--p20);
+    padding: var(--p20) 0;
     line-height: 32px;
 }
 .card-img{

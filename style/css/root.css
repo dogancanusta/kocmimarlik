@@ -386,10 +386,6 @@ table tbody tr:nth-child(even) {
     top: 0;
     left: 0;
 }
-.card-title{
-    padding: var(--p20) 0;
-    line-height: 32px;
-}
 .card-img{
     border-bottom: solid 1px var(--secondary);
 }
@@ -547,7 +543,23 @@ table tbody tr:nth-child(even) {
         -webkit-transform: scale(1);
     }
 }
-@media (max-width: 768px) {
+@-webkit-keyframes fade-in{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in{
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+@media (max-width: 768px){
     table thead {
       display: none;
     }

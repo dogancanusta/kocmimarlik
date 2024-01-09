@@ -64,7 +64,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    position: relative;
 }
 .wave,
 .wave::before,
@@ -91,41 +90,45 @@
     opacity: .6;
     animation: wave-reverse 6s ease-out infinite alternate;
 }
-.aboutus-container-presentation-body{
+.aboutus-presentation{
     width: 100%;
-    height: 490px;
-    position: relative;
-}
-.aboutus-body-presentation{
-    width: 100%;
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    margin-top: 90px;
     line-height: 50px;
     text-align: center;
 }
 .aboutus-body{
     display: flex;
     justify-content: center;
+    margin: 70px 0;
+}
+.aboutus-body-pagelocationcards .card{
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: none;
+}
+.aboutus-body-pagelocationcards .card .card-body{
+    align-items: center;
+    text-align: center;
 }
 .aboutus-body-pagelocationcards{
     width: 1280px;
     height: 100%;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
-    margin: -210px 0 70px 0;
-    text-align: center;
 }
 .pagelocationcards-headericon{
     width: 150px;
     height: 150px;
-    border: solid 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border-radius: 50%;
 }
-
 .footer{
     background-color: var(--primary-darkblue);
     color: var(--white);
@@ -229,9 +232,6 @@
     }
     #hamburger:checked ~ .navbar-links{
         height: calc(100vh - 60px);
-    }
-    .aboutus-body-pagelocationcards{
-        margin-top: 0;
     }
     .footer-bottom{
         justify-content: center;

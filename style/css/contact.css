@@ -124,6 +124,9 @@
     border: none;
     box-shadow: none;
 }
+.contac-content-left .card-body{
+    padding: 20px 0 0 0;
+}
 .contac-content-left .card .card-title{
     border-bottom: solid 1px var(--white);
     font-family: 'Alex Brush', cursive;
